@@ -1,0 +1,101 @@
+﻿Build1=Default,b4a.example
+File1=arrow_cursor.png
+File10=split.png
+File11=square.png
+File12=trash.png
+File2=arrow_cursor_click.png
+File3=compass.png
+File4=left-arrow.png
+File5=line.png
+File6=main.bal
+File7=move.png
+File8=project_editor_drawer_layout.bal
+File9=project_editor_layout.bal
+FileGroup1=Default Group\icons
+FileGroup10=Default Group\icons
+FileGroup11=Default Group\icons
+FileGroup12=Default Group\icons
+FileGroup2=Default Group\icons
+FileGroup3=Default Group\icons
+FileGroup4=Default Group\icons
+FileGroup5=Default Group\icons
+FileGroup6=Default Group
+FileGroup7=Default Group\icons
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=b4xdrawer
+Library2=core
+Library3=phone
+Library4=xui
+Library5=xui views
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Constants
+Module10=MoveTool
+Module11=Point
+Module12=Project
+Module13=ProjectEditorActivity
+Module14=RectangleTool
+Module15=Roof
+Module16=ShapeSelectionTool
+Module17=Splice
+Module18=SpliceIdGenerator
+Module19=SplitLineActioin
+Module2=CornerTool
+Module20=Starter
+Module21=Tools
+Module3=CursorCross
+Module4=Cut
+Module5=DeleteShapeAction
+Module6=Line
+Module7=LineSelectionTool
+Module8=LineString
+Module9=LineStringTool
+NumberOfFiles=12
+NumberOfLibraries=5
+NumberOfModules=21
+Version=12.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: landscape
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("main")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub Button1_Click
+	'xui.MsgboxAsync("Hello world!", "B4X")
+	StartActivity(ProjectEditorActivity)
+End Sub
+
