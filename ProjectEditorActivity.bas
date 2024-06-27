@@ -63,6 +63,11 @@ Private Sub initializeActionMenu
 	lstMenu.AddTwoLinesAndBitmap2("Teilen in 2 St.", "Teilt ausgewählte Linie", LoadBitmap(File.DirAssets, "split.png"), vSplitLineAction)
 	mTools.TOOL_SELECT_LINE.AddSelectionChangedListener(vSplitLineAction)
 	
+	Dim vSendToWhatsAppAction As SendToWhatsAppAction
+	vSendToWhatsAppAction.Initialize("4915150846500", mProject)
+	lstMenu.AddTwoLinesAndBitmap2("An Grischa senden", "Sendet an Grischa WatsApp Nachricht", LoadBitmap(File.DirAssets, "whatsapp.png"), vSendToWhatsAppAction)
+	
+	
 	For i = 1 To 30
 		lstMenu.AddTwoLinesAndBitmap("First line", "Second line with long description", LoadBitmap(File.DirAssets, "compass.png"))
 	Next

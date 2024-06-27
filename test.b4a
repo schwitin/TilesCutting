@@ -3,6 +3,7 @@ File1=arrow_cursor.png
 File10=split.png
 File11=square.png
 File12=trash.png
+File13=whatsapp.png
 File2=arrow_cursor_click.png
 File3=compass.png
 File4=left-arrow.png
@@ -15,6 +16,7 @@ FileGroup1=Default Group\icons
 FileGroup10=Default Group\icons
 FileGroup11=Default Group\icons
 FileGroup12=Default Group\icons
+FileGroup13=Default Group\icons
 FileGroup2=Default Group\icons
 FileGroup3=Default Group\icons
 FileGroup4=Default Group\icons
@@ -29,7 +31,7 @@ Library2=core
 Library3=phone
 Library4=xui
 Library5=xui views
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~AddActivityText(Main,~\n~~\n~		<intent-filter>~\n~        <action android:name="android.intent.action.SEND" />~\n~        <category android:name="android.intent.category.DEFAULT" />~\n~        <data android:mimeType="text/plain" />~\n~    </intent-filter>~\n~~\n~)~\n~
 Module1=Constants
 Module10=MoveTool
 Module11=Point
@@ -37,13 +39,14 @@ Module12=Project
 Module13=ProjectEditorActivity
 Module14=RectangleTool
 Module15=Roof
-Module16=ShapeSelectionTool
-Module17=Splice
-Module18=SpliceIdGenerator
-Module19=SplitLineActioin
+Module16=SendToWhatsAppAction
+Module17=ShapeSelectionTool
+Module18=Splice
+Module19=SpliceIdGenerator
 Module2=CornerTool
-Module20=Starter
-Module21=Tools
+Module20=SplitLineActioin
+Module21=Starter
+Module22=Tools
 Module3=CursorCross
 Module4=Cut
 Module5=DeleteShapeAction
@@ -51,9 +54,9 @@ Module6=Line
 Module7=LineSelectionTool
 Module8=LineString
 Module9=LineStringTool
-NumberOfFiles=12
+NumberOfFiles=13
 NumberOfLibraries=5
-NumberOfModules=21
+NumberOfModules=22
 Version=12.8
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -87,7 +90,10 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
-
+	If Activity.GetStartingIntent.Action=Activity.GetStartingIntent.ACTION_SEND Then
+		Dim  receivedtext As String = Activity.GetStartingIntent.GetExtra("android.intent.extra.TEXT")
+		xui.MsgboxAsync(receivedtext, "Message Received")
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
