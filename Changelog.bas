@@ -12,7 +12,7 @@ Sub Class_Globals
 	Public availableVersions As List
 End Sub
 
-' https://hostingcanada.org/htpasswd-generator/
+
 Public Sub Initialize(pUrlToChangelog As String, pUsername As String, pPassword As String)
 	urlToChangelog = pUrlToChangelog
 	username = pUsername

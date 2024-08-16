@@ -76,6 +76,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Changelog,initializeavailableVersions,17,0,Changelog,Class_Globals,8,3,SplitLineActioin,Class_Globals,0,0,Starter,Process_Globals,8,0,Main,Globals,24,0,Main,Process_Globals,16,0,Main,initializeUpdateButton,90,0,Changelog,parseAllVersions,34,0,Version,ToString,46,0,UpdaterConstants,Process_Globals,6,1
+NavigationStack=SplitLineActioin,Class_Globals,0,0,Starter,Process_Globals,8,0,Main,Process_Globals,16,0,Main,initializeUpdateButton,90,0,Changelog,parseAllVersions,34,0,Version,ToString,46,0,Changelog,Class_Globals,8,3,Main,Activity_Create,28,5,Main,Globals,25,0,UpdaterConstants,Process_Globals,9,1
 SelectedBuild=0
 VisibleModules=1,25,24

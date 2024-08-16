@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Verzeichnisschutz"
+AuthUserFile /mnt/rid/94/85/5849485/htdocs/.htpasswd
+AuthGroupFile /dev/null
+require user apk
