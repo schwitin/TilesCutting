@@ -1,0 +1,22 @@
+{
+	"changelogitem":[
+		{
+			"versionCode": "101",
+			"versionName": "1.0.1",
+			"fileName":"test-1.0.1.apk",
+			"changes": [
+			"- Meine Verbesserung 3",
+			"- Meine Verbesserung 4"
+			]
+		},
+		{
+			"versionCode": "100",
+			"version": "1.0.0",
+			"fileName":"test-1.0.0.apk",
+			"changes": [
+			"- Meine Verbesserung 1",
+			"- Meine Verbesserung 2"
+			]
+		}
+	]
+}
